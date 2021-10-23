@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    width: 47%;
+    border: 1px solid rgb(94, 126, 43);
+    margin: 10px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.055);
+    border-radius: 5px;
+}
+
+.container:hover{
+    background-color: rgba(255, 255, 255, 0.11);
+}
+
+.infoBlock {
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    color: rgba(221, 210, 50, 0.856);
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 30px;
+}
+
+img {
+    max-height: 280px;
+    user-select: none;
+    padding-right: 10px;
+}
+

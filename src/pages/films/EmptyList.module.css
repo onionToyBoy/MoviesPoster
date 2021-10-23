@@ -1,0 +1,23 @@
+.container {
+    width: 70%;
+    margin: auto;
+    padding: 10px;
+    user-select: none;
+}
+
+.title {
+    font-size: 100px;
+    text-align: center;
+    color: rgba(90, 146, 34, 0.288);
+    font-family: 'Creepster', cursive;
+
+}
+
+.image {
+    height: 280px;
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
