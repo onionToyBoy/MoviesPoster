@@ -2,7 +2,13 @@ import React from 'react';
 
 import styles from './FilmCard.module.css';
 
-export const FilmCard = ({ item }) => {
+interface filmItem{
+	Title:string,
+	Year:string,
+	Poster: string
+};
+
+export const FilmCard:React.FC<{item:filmItem}> = ({ item }) => {
 	const { Title, Year, Poster } = item;
 	return (
 		<div className={styles.container}>

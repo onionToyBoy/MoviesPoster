@@ -9,6 +9,7 @@ import styles from './Films.module.css'
 
 export const Films = () => {
     const [searchValue, setSearchValue] = useState('');
+    const [isSearched, setIsSearched] = useState(false);
 
     const dispath = useDispatch();
     const films = useSelector(selectFilms);
@@ -32,6 +33,7 @@ export const Films = () => {
     const onSearch: () => void = () => {
         dispath(loadData(searchValue));
         setSearchValue('');
+        setIsSearched(true);
     }
 
     return (
@@ -52,7 +54,7 @@ export const Films = () => {
             <div className={styles.filmList}>
                 {films?.length ? films.map((el:any) => (
                     <FilmCard key={el.imdbID} item={el} />
-                )) : <EmptyList />}
+                )) :<EmptyList isSearched={isSearched}/>}
             </div>
         </>
     );
