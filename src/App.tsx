@@ -6,6 +6,7 @@ import { store } from './store/store';
 import './App.css';
 import { Header } from './components/Header';
 import { Films } from './pages/films/Films';
+import { About } from './pages/about/About';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
 				<div className='container'>
 					<div className='content'>
 						<Route path='/' exact component={Films} />
+						<Route path='/about' component={About} />
 					</div>
 				</div>
 			</Router>
