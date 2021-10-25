@@ -1,11 +1,8 @@
 import { takeEvery, put, call } from 'redux-saga/effects';
-import {SHOW_MORE_FILMS, SEARCH_FILMS } from '../../constants/types';
+import {SHOW_MORE_FILMS } from '../../constants/types';
 import {
 	changeErrorStatus,
 	changeLoadingStatus,
-	searchFilms,
-	setFilmDescription,
-	loadData,
     loadMoreFilms,
 } from '../actions';
 

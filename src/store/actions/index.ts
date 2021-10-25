@@ -3,10 +3,11 @@ import {
 	CHANGE_LOADING_STATUS,
 	SEARCH_FILMS,
 	SET_FILM_DESCRIPTION,
-	LOAD_DATA,
+	LOAD_BY_SEARCH_VALUE,
 	SHOW_MORE_FILMS,
 	LOAD_MORE_FILMS,
 	INCREMENT_PAGE,
+	LOAD_BY_ID
 } from '../../constants/types';
 
 export const changeErrorStatus = (status: boolean) => {
@@ -23,10 +24,17 @@ export const changeLoadingStatus = (status: boolean) => {
 	};
 };
 
-export const loadData = (searchValue: string = '') => {
+export const loadBySearchValue = (searchValue: string = '') => {
 	return {
-		type: LOAD_DATA,
+		type: LOAD_BY_SEARCH_VALUE,
 		payload: searchValue,
+	};
+};
+
+export const loadById = (id: string ) => {
+	return {
+		type: LOAD_BY_ID,
+		payload: id,
 	};
 };
 

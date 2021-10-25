@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { incrementPage, loadData, searchFilms, showMoreFilms } from '../../store/actions';
+import { incrementPage, loadBySearchValue, searchFilms, showMoreFilms } from '../../store/actions';
 import { selectFilms, selectPage, selectTotalResults } from '../../store/selectors';
 import { checkTotalResults } from '../../utils';
 import { EmptyList } from './EmptyList';
@@ -38,7 +38,7 @@ export const Films = () => {
     };
 
     const onSearch: () => void = () => {
-        dispath(loadData(searchValue));
+        dispath(loadBySearchValue(searchValue));
         setIsSearched(true);
     }
 

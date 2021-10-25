@@ -8,6 +8,7 @@ import { About } from './pages/about/About';
 import { useSelector } from 'react-redux';
 import { selectLoadingStatus } from './store/selectors';
 import { Spinner } from './components/Spinner';
+import { FilmDescription } from './pages/description/FilmDescription';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
 					<div className='content'>
 						<Route path='/' exact component={Films} />
 						<Route path='/about' component={About} />
+						<Route path='/description' component={FilmDescription} />
 					</div>
 				</div>
 				{loadingStatus&&<Spinner/>}

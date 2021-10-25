@@ -5,14 +5,18 @@ import {
 	SET_FILM_DESCRIPTION,
 	LOAD_MORE_FILMS,
 	INCREMENT_PAGE,
-	SET_NUMBER_OF_RESULTS,
 } from '../../constants/types';
+
+type opendFilsType = {
+	[key:string]: any;
+};
 
 const initialState = {
 	films: [] as Array<Object>,
 	isLoading: false as boolean,
 	isError: false as boolean,
-	opendFilms: {} as object,
+	opendFilms: {} as opendFilsType,
+	opendFilmId: '' as string,
 	page: 1 as number,
 	totalResults: 0 as number,
 };
@@ -42,9 +46,13 @@ export const rootReducer = (state = initialState, action: any) => {
 		case SET_FILM_DESCRIPTION:
 			const updatedOpendFilms: Object = {
 				...state.opendFilms,
-				[action.payload.film.imdbID]: action.payload.film,
+				[action.payload.imdbID]: action.payload,
 			};
-			return { ...state, opendFilms: updatedOpendFilms };
+			return {
+				...state,
+				opendFilms: updatedOpendFilms,
+				opendFilmId: action.payload.imdbID,
+			};
 		case LOAD_MORE_FILMS:
 			const extendedFilms = state.films?.concat(
 				Object.keys(action.payload).includes('Search')

@@ -1,6 +1,8 @@
 export const SEARCH_FILMS = 'SEARCH_FILMS';
 
-export const LOAD_DATA = 'LOAD_DATA';
+export const LOAD_BY_SEARCH_VALUE = 'LOAD_BY_SEARCH_VALUE';
+
+export const LOAD_BY_ID = 'LOAD_BY_ID';
 
 export const CHANGE_LOADING_STATUS = 'CHANGE_LOADING_STATUS';
 
