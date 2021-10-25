@@ -22,6 +22,7 @@
 }
 
 img {
+    max-width: 250px;
     max-height: 280px;
     user-select: none;
     padding-right: 10px;

@@ -1,17 +1,19 @@
 import React from 'react';
-import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import { store } from './store/store';
 import './App.css';
 import { Header } from './components/Header';
 import { Films } from './pages/films/Films';
 import { About } from './pages/about/About';
+import { useSelector } from 'react-redux';
+import { selectLoadingStatus } from './store/selectors';
+import { Spinner } from './components/Spinner';
 
 
 function App() {
+	const loadingStatus = useSelector(selectLoadingStatus);
+
 	return (
-		<Provider store={store}>
 			<Router>
 				<Header />
 				<div className='container'>
@@ -20,8 +22,8 @@ function App() {
 						<Route path='/about' component={About} />
 					</div>
 				</div>
+				{loadingStatus&&<Spinner/>}
 			</Router>
-		</Provider>
 	);
 }
 
