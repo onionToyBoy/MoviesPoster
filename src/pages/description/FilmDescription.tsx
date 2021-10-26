@@ -17,7 +17,11 @@ export const FilmDescription = () => {
 
 	const choiseColor: (raiting: string | undefined) => any = (raiting) => {
 		if (raiting) {
+			if (raiting === 'N/A') {
+				return styles.hidden;
+			}
 			const numberRaiting: number = parseFloat(raiting);
+
 			if (numberRaiting < 4) {
 				return styles.red;
 			}
@@ -34,7 +38,7 @@ export const FilmDescription = () => {
 				return styles.strongGreen;
 			}
 		}
-	}
+	};
 
 	return (
 		<div className={styles.container}>
@@ -42,7 +46,7 @@ export const FilmDescription = () => {
 				<div className={styles.description}>
 					<div className={styles.imageContainer}>
 						<Link to='/' className={styles.buttonContainer}>
-							<div className={styles.button} >Back</div>
+							<div className={styles.button}>Back</div>
 						</Link>
 						<img
 							src={film.Poster === 'N/A' ? noimage : film.Poster}
@@ -53,14 +57,39 @@ export const FilmDescription = () => {
 					<div className={styles.container}>
 						<div className={styles.title}>{film.Title}</div>
 						<div className={styles.infoBlock}>
-							<div className={styles.info}><div className={styles.label}>Year:</div><div>{film.Year}</div></div>
-							<div className={styles.info}><div className={styles.label}>Type:</div><div>{film.Type}</div></div>
-							<div className={styles.info}><div className={styles.label}>Actors:</div><div>{film.Actors}</div></div>
-							<div className={styles.info}><div className={styles.label}>Country:</div><div>{film.Country}</div></div>
-							<div className={styles.info}><div className={styles.label}>Genre:</div><div>{film.Genre}</div></div>
-							<div className={styles.info}><div className={styles.label}>Runtime:</div><div>{film.Runtime}</div></div>
-							<div className={styles.info}><div className={styles.label}>Plot:</div><div>{film.Plot}</div></div>
-							<div className={`${styles.rating} ${choiseColor(film.imdbRating)}`}>★{film.imdbRating}</div>
+							<div className={styles.info}>
+								<div className={styles.label}>Year:</div>
+								<div>{film.Year}</div>
+							</div>
+							<div className={styles.info}>
+								<div className={styles.label}>Type:</div>
+								<div>{film.Type}</div>
+							</div>
+							<div className={styles.info}>
+								<div className={styles.label}>Actors:</div>
+								<div>{film.Actors}</div>
+							</div>
+							<div className={styles.info}>
+								<div className={styles.label}>Country:</div>
+								<div>{film.Country}</div>
+							</div>
+							<div className={styles.info}>
+								<div className={styles.label}>Genre:</div>
+								<div>{film.Genre}</div>
+							</div>
+							<div className={styles.info}>
+								<div className={styles.label}>Runtime:</div>
+								<div>{film.Runtime}</div>
+							</div>
+							<div className={styles.info}>
+								<div className={styles.label}>Plot:</div>
+								<div>{film.Plot}</div>
+							</div>
+							<div
+								className={`${styles.rating} ${choiseColor(film.imdbRating)}`}
+							>
+								★{film.imdbRating}
+							</div>
 						</div>
 					</div>
 				</div>

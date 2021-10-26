@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import {
@@ -21,9 +21,16 @@ import styles from './Films.module.css';
 export const Films = () => {
 	const [searchValue, setSearchValue] = useState('');
 	const [isSearched, setIsSearched] = useState(false);
+	const [isSortedByMaxYear, setIsSortedByMaxYear] = useState(false);
+	const [isSortedByMinYear, setIsSortedByMinYear] = useState(false);
 
 	const dispath = useDispatch();
-	const films = useSelector(selectFilms);
+
+	useEffect(() => {
+		dispath(loadBySearchValue(''));
+	}, []);
+
+	const films: Array<any> = useSelector(selectFilms);
 	const page = useSelector(selectPage);
 	const totalResults = useSelector(selectTotalResults);
 	const loadingStatus = useSelector(selectLoadingStatus);
@@ -53,6 +60,26 @@ export const Films = () => {
 		dispath(showMoreFilms(searchValue, page + 1));
 	};
 
+	const onSortByMaxYear: () => void = () => {
+		if (isSortedByMaxYear) {
+			setIsSortedByMaxYear(false);
+		} else {
+			setIsSortedByMaxYear(true);
+			setIsSortedByMinYear(false);
+			films.sort((a, b) => (parseInt(a.Year) < parseInt(b.Year) ? 1 : -1));
+		}
+	};
+
+	const onSortByMinYear: () => void = () => {
+		if (isSortedByMinYear) {
+			setIsSortedByMinYear(false);
+		} else {
+			setIsSortedByMinYear(true);
+			setIsSortedByMaxYear(false);
+			films.sort((a, b) => (parseInt(a.Year) > parseInt(b.Year) ? 1 : -1));
+		}
+	};
+
 	return (
 		<>
 			<div className={styles.searchBar}>
@@ -69,12 +96,20 @@ export const Films = () => {
 					Search
 				</div>
 			</div>
+			{films?.length && (
+				<div className={styles.filters}>
+					<div className={styles.filter} onClick={onSortByMaxYear}>
+						Sort by max year
+					</div>
+					<div className={styles.filter} onClick={onSortByMinYear}>
+						Sort by min year
+					</div>
+				</div>
+			)}
 			<div className={styles.filmList}>
-				{films?.length && searchValue ? (
-					films.map((el: any) => <FilmCard key={el.imdbID} item={el} />)
-				) : (
-					loadingStatus|| <EmptyList isSearched={isSearched} />
-				)}
+				{films?.length && searchValue
+					? films.map((el: any) => <FilmCard key={el.imdbID} item={el} />)
+					: loadingStatus || <EmptyList isSearched={isSearched} />}
 			</div>
 			{films?.length && searchValue && checkTotalResults(page, totalResults) && (
 				<div className={styles.moreButton}>

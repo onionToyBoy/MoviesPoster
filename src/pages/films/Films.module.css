@@ -46,6 +46,8 @@
     border-radius: 5px;
     width: 18%;
     text-align: center;
+    user-select: none;
+
 }
 
 .button:hover {
@@ -56,6 +58,25 @@
     background-color: rgb(136, 143, 39);
 }
 
+.filters{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.filter{
+    background-color: rgba(182, 184, 162, 0.452);
+    color: rgba(243, 255, 220, 0.884);
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    padding: 13px;
+    border-radius: 5px;
+    width: 25%;
+    text-align: center;
+    user-select: none;
+    margin: 10px;
+}
+
 .filmList {
     width: 100%;
     display: flex;
@@ -64,8 +85,35 @@
     justify-content: space-between;
 }
 
-.moreButton{
+.moreButton {
     display: flex;
     justify-content: center;
     padding-top: 40px;
+}
+
+@media (max-width: 735px) {
+    .inputBar {
+        width: 100%;
+
+    }
+
+    .input {
+        flex: 3;
+    }
+
+    .button {
+        width: 30%;
+    }
+}
+
+@media (max-width: 650px) {
+    .button {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    .input {
+        font-size: 15px;
+        padding: 7px;
+    }
 }

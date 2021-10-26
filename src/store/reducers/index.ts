@@ -8,7 +8,7 @@ import {
 } from '../../constants/types';
 
 type opendFilsType = {
-	[key:string]: any;
+	[key: string]: any;
 };
 
 const initialState = {
@@ -38,6 +38,7 @@ export const rootReducer = (state = initialState, action: any) => {
 				...state,
 				films: updatedFilms,
 				totalResults: upDatedTotalResults,
+				page: 1,
 			};
 		case CHANGE_LOADING_STATUS:
 			return { ...state, isLoading: action.payload };

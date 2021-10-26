@@ -9,7 +9,7 @@ import {
 async function fetchFilms(searchValue) {
 	try {
 		const response = await fetch(
-			`http://www.omdbapi.com/?apikey=e5e760b6&s=${searchValue}&page=1`
+			`http://www.omdbapi.com/?apikey=e5e760b6&s=${searchValue}&page=1&`
 		);
 		return await response.json();
 	} catch (e) {

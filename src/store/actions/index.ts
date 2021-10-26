@@ -7,7 +7,7 @@ import {
 	SHOW_MORE_FILMS,
 	LOAD_MORE_FILMS,
 	INCREMENT_PAGE,
-	LOAD_BY_ID
+	LOAD_BY_ID,
 } from '../../constants/types';
 
 export const changeErrorStatus = (status: boolean) => {
@@ -74,3 +74,4 @@ export const incrementPage = () => {
 		type: INCREMENT_PAGE,
 	};
 };
+

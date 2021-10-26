@@ -8,9 +8,7 @@ export const selectPage = (state: initialState) => state.page;
 
 export const selectTotalResults = (state: initialState) => state.totalResults;
 
-export const selectOpendFilmId= (state: initialState) =>
-	state.opendFilmId;
+export const selectOpendFilmId = (state: initialState) => state.opendFilmId;
 
-export const selectFilmDescription= (id:string) => (state: initialState) =>
+export const selectFilmDescription = (id: string) => (state: initialState) =>
 	state.opendFilms[id];
-  
