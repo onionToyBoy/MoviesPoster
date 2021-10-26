@@ -25,7 +25,7 @@ export const FilmCard: React.FC<{ item: filmItem }> = ({ item }) => {
 
 	return (
 		<Link className={styles.container} onClick={onOpenDescription} to={`/description/${imdbID}`}>
-			<img src={Poster === "N/A" ? noimage : Poster} alt={Title} />
+			<img src={Poster === "N/A" ? noimage : Poster} alt={Title} className={styles.image}/>
 			<div className={styles.infoBlock}>{`${Title}(${Year})`}</div>
 		</Link>
 	);

@@ -1,0 +1,106 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.description {
+    display: flex;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.imageContainer {
+    width: 50%;
+    text-align: center;
+}
+
+.image {
+    max-width: 380px;
+    height: auto;
+}
+
+.buttonContainer {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.button {
+    background-color: rgba(174, 182, 60, 0.452);
+    color: rgba(243, 255, 220, 0.884);
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    padding: 13px;
+    border-radius: 5px;
+    width: 200px;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: rgba(156, 163, 51, 0.726);
+}
+
+.button:active {
+    background-color: rgb(136, 143, 39);
+}
+
+.title {
+    font-size: 35px;
+    text-align: center;
+    color: rgb(206, 191, 57);
+    font-weight: 700;
+    padding-bottom: 15px;
+}
+
+.info {
+    font-size: 22px;
+    color: rgb(236, 207, 162);
+    padding-bottom: 20px;
+    display: flex;
+}
+
+.label {
+    font-size: 20px;
+    color: rgba(223, 182, 120, 0.712);
+    padding-right: 10px;
+}
+
+.infoBlock {
+    width: 75%;
+    border: 1px solid red;
+    margin: auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(125, 135, 31, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(44, 224, 27, 0.719);
+}
+
+.rating {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.red {
+    color: rgb(131, 19, 19)
+}
+
+.orange {
+    color: rgb(131, 79, 19);
+}
+
+.yellow {
+    color: rgb(161, 139, 14);
+}
+
+.lightGreen {
+    color: rgb(135, 182, 59);
+}
+
+.strongGreen {
+    color: rgb(92, 201, 3);
+}
