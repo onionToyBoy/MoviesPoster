@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { RadioButton } from '../../components/RadioButton';
 
 import {
 	incrementPage,
@@ -96,13 +97,21 @@ export const Films = () => {
 					Search
 				</div>
 			</div>
-			{films?.length && (
+			{films?.length > 0 && (
 				<div className={styles.filters}>
-					<div className={styles.filter} onClick={onSortByMaxYear}>
-						Sort by max year
+					<div>
+						<RadioButton
+							label='From resently'
+							fn={onSortByMaxYear}
+							isSelected={isSortedByMaxYear}
+						/>
 					</div>
-					<div className={styles.filter} onClick={onSortByMinYear}>
-						Sort by min year
+					<div>
+						<RadioButton
+							label='From oldest'
+							fn={onSortByMinYear}
+							isSelected={isSortedByMinYear}
+						/>
 					</div>
 				</div>
 			)}

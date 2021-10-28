@@ -18,13 +18,23 @@
 .image {
     max-width: 380px;
     height: auto;
+    padding-left: 10px;
+}
+
+.innerImage {
+    max-width: 160px;
+    height: auto;
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 15px;
 }
 
 .buttonContainer {
     display: flex;
     margin: auto;
     justify-content: center;
-    padding-bottom: 20px;
+    padding: 0 20px 20px 20px;
 }
 
 .button {
@@ -69,7 +79,6 @@
 
 .infoBlock {
     width: 75%;
-    border: 1px solid red;
     margin: auto;
     padding: 20px;
     background: rgba(255, 255, 255, 0.25);
@@ -107,4 +116,94 @@
 
 .hidden{
     display: none;
+}
+
+@media (max-width: 1150px) {
+    .image {
+        max-width: 250px;
+    }
+
+    .infoBlock {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+    .info {
+        font-size: 20px;
+    }
+
+    .label{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 750px) {
+  .image {
+        max-width: 200px;
+  }
+
+  .title {
+    font-size: 25px;
+}
+
+.info {
+    font-size: 17px;
+}
+
+.label{
+    font-size: 15px;
+}
+
+
+.imageContainer {
+    width: 40%;
+}
+        
+}
+
+@media (max-width: 750px) {
+    .title {
+        font-size: 22px;
+    }
+    
+    .info {
+        font-size: 15px;
+    }
+    
+    .label{
+        font-size: 12px;
+    }
+
+    .description{
+        padding: 0;
+    }
+}
+
+@media (max-width: 550px) {
+    .image {
+        display: none;
+  }
+
+  .description {
+      flex-direction: column;
+  }
+
+  .innerImage{
+    display: block;
+
+  }
+
+  
+.button {
+    font-size: 16px;
+    padding: 10px;
+}
+
+.buttonContainer {
+    padding: 10px;
+}
 }

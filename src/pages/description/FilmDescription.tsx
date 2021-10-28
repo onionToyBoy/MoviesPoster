@@ -57,6 +57,11 @@ export const FilmDescription = () => {
 					<div className={styles.container}>
 						<div className={styles.title}>{film.Title}</div>
 						<div className={styles.infoBlock}>
+						<img
+							src={film.Poster === 'N/A' ? noimage : film.Poster}
+							alt={film.Title}
+							className={styles.innerImage}
+						/>
 							<div className={styles.info}>
 								<div className={styles.label}>Year:</div>
 								<div>{film.Year}</div>

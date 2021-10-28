@@ -28,3 +28,56 @@
     padding-right: 10px;
 }
 
+@media (max-width: 1100px) {
+    .infoBlock{
+        font-size: 22px;
+    }
+
+    .image{
+        max-width: 200px;
+    max-height: 230px;
+    }
+}
+
+@media (max-width: 950px) {
+    /* .container {
+        width: 100%;
+    } */
+    .infoBlock{
+        font-size: 18px;
+    }
+
+    .image{
+        max-width: 150px;
+    max-height: 180px;
+    }
+}
+
+@media (max-width: 770px) {
+    .container {
+        width: 100%;
+    }
+    .infoBlock{
+        font-size: 25px;
+    }
+
+    .image{
+        max-width: 175px;
+    max-height: 210px;
+    }
+}
+
+@media (max-width: 450px){
+    .container {
+        padding: 7px;
+    }
+
+    .infoBlock{
+        font-size: 17px;
+    }
+
+    .image{
+        max-width: 110px;
+    max-height: 155px;
+    }
+}
