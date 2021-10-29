@@ -1,14 +1,14 @@
-import { initialState } from '../reducers';
+import { initialStateType } from '../reducers';
 
-export const selectFilms = (state: initialState) => state.films;
+export const selectFilms = (state: initialStateType) => state.films;
 
-export const selectLoadingStatus = (state: initialState) => state.isLoading;
+export const selectLoadingStatus = (state: initialStateType) => state.isLoading;
 
-export const selectPage = (state: initialState) => state.page;
+export const selectPage = (state: initialStateType) => state.page;
 
-export const selectTotalResults = (state: initialState) => state.totalResults;
+export const selectTotalResults = (state: initialStateType) => state.totalResults;
 
-export const selectOpendFilmId = (state: initialState) => state.opendFilmId;
+export const selectOpendFilmId = (state: initialStateType) => state.opendFilmId;
 
-export const selectFilmDescription = (id: string) => (state: initialState) =>
+export const selectFilmDescription = (id: string) => (state: initialStateType) =>
 	state.opendFilms[id];

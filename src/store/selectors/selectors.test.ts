@@ -1,3 +1,4 @@
+import { initialStateType } from '../reducers';
 import {
 	selectFilms,
 	selectLoadingStatus,
@@ -10,7 +11,7 @@ import {
 describe('Tests of selectors', () => {
 	const opendFilmId = 'tt1520211';
 
-	const state = {
+	const state: initialStateType = {
 		films: [
 			{
 				Title: 'Pink',

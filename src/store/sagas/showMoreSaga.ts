@@ -6,10 +6,20 @@ import {
     loadMoreFilms,
 } from '../actions';
 
-async function fetchFilms({searchValue, page}) {
+type actionType= {
+	type: typeof SHOW_MORE_FILMS,
+	payload:payloadType
+}
+
+type payloadType={
+	page: number
+	searchValue: string,
+}
+
+const fetchFilms = async(action: payloadType ):Promise<any>=> {
 	try {
 		const response = await fetch(
-			`http://www.omdbapi.com/?apikey=e5e760b6&s=${searchValue}&page=${page}`
+			`http://www.omdbapi.com/?apikey=e5e760b6&s=${action.searchValue}&page=${action.page}`
 		);
 		return await response.json();
 	} catch (e) {
@@ -17,10 +27,10 @@ async function fetchFilms({searchValue, page}) {
 	}
 }
 
-function* sagaWorker(action) {
+function* sagaWorker(action: actionType) {
 	try {
 		yield put(changeLoadingStatus(true));
-		const films = yield call(fetchFilms, action.payload);
+		const films:Object = yield call(fetchFilms, action.payload);
 		yield put(loadMoreFilms(films));
 	} catch {
 		yield put(changeErrorStatus(true));

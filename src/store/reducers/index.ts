@@ -11,7 +11,7 @@ type opendFilsType = {
 	[key: string]: any;
 };
 
-const initialState = {
+ export const initialState = {
 	films: [] as Array<Object>,
 	isLoading: false as boolean,
 	isError: false as boolean,
@@ -21,7 +21,7 @@ const initialState = {
 	totalResults: 0 as number,
 };
 
-export type initialState = typeof initialState;
+export type initialStateType = typeof initialState;
 
 export const rootReducer = (state = initialState, action: any) => {
 	switch (action.type) {
