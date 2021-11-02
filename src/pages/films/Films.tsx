@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, ReactElement } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { RadioButton } from '../../components/RadioButton';
 
@@ -19,7 +19,7 @@ import { EmptyList } from './EmptyList';
 import { FilmCard } from './FilmCard';
 import styles from './Films.module.css';
 
-export const Films = () => {
+export const Films: React.FC = () => {
 	const [searchValue, setSearchValue] = useState('');
 	const [isSearched, setIsSearched] = useState(false);
 	const [isSortedByMaxYear, setIsSortedByMaxYear] = useState(false);
@@ -36,7 +36,7 @@ export const Films = () => {
 	const totalResults = useSelector(selectTotalResults);
 	const loadingStatus = useSelector(selectLoadingStatus);
 
-	const createCross = () => {
+	const createCross: () => ReactElement = () => {
 		return (
 			<div
 				className={styles.cross}

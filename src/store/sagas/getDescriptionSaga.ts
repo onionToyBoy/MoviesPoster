@@ -6,12 +6,12 @@ import {
 	setFilmDescription,
 } from '../actions';
 
-type actionType= {
-	type: typeof LOAD_BY_ID,
-	payload: string,
-}
+type actionType = {
+	type: typeof LOAD_BY_ID;
+	payload: string;
+};
 
-const fetchFilms = async(id:string):Promise<any>=> {
+const fetchFilms = async (id: string): Promise<any> => {
 	try {
 		const response = await fetch(
 			`https://www.omdbapi.com/?apikey=e5e760b6&i=${id}`
@@ -20,12 +20,12 @@ const fetchFilms = async(id:string):Promise<any>=> {
 	} catch (e) {
 		console.log(e);
 	}
-}
+};
 
-export function* sagaWorker(action:actionType) {
+export function* sagaWorker(action: actionType) {
 	try {
 		yield put(changeLoadingStatus(true));
-		const film:Object = yield call(fetchFilms, action.payload);
+		const film: Object = yield call(fetchFilms, action.payload);
 		yield put(setFilmDescription(film));
 	} catch {
 		yield put(changeErrorStatus(true));

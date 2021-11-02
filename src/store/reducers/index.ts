@@ -11,7 +11,7 @@ type opendFilsType = {
 	[key: string]: any;
 };
 
- export const initialState = {
+export const initialState = {
 	films: [] as Array<Object>,
 	isLoading: false as boolean,
 	isError: false as boolean,

@@ -104,20 +104,22 @@ describe('Root reducer', () => {
 			],
 		};
 
-		const newUploadedFilm ={ 
-			Search:[
-			{Title: 'Matrix',
-			Year: '1999',
-			Poster: 'http//7801323dssd',
-			imdbID: 'tt20192',}
-		]};
+		const newUploadedFilm = {
+			Search: [
+				{
+					Title: 'Matrix',
+					Year: '1999',
+					Poster: 'http//7801323dssd',
+					imdbID: 'tt20192',
+				},
+			],
+		};
 
 		const expectedState = {
 			...defaultState,
-			films: [
-				...defaultState.films, ...newUploadedFilm.Search],
-			};
-	
+			films: [...defaultState.films, ...newUploadedFilm.Search],
+		};
+
 		const newState = rootReducer(defaultState, loadMoreFilms(newUploadedFilm));
 
 		expect(newState).toStrictEqual(expectedState);

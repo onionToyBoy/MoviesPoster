@@ -58,7 +58,7 @@
     background-color: rgb(136, 143, 39);
 }
 
-.filters{
+.filters {
     display: flex;
     justify-content: center;
     padding: 30px;
@@ -104,13 +104,14 @@
         font-size: 15px;
         padding: 7px;
     }
+
     .cross {
         font-size: 22px;
     }
 }
 
 @media (max-width: 550px) {
-    .filters{
+    .filters {
         justify-content: space-around;
         padding: 20px 5px 5px 5px;
     }

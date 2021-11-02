@@ -61,7 +61,7 @@
         font-size: 70px;
     }
 
-    .image{
+    .image {
         height: 220px;
     }
 }
@@ -71,9 +71,10 @@
         font-size: 40px;
     }
 
-    .image{
+    .image {
         height: 200px;
     }
+
     .container {
         width: 100%;
     }

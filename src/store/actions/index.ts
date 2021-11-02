@@ -31,7 +31,7 @@ export const loadBySearchValue = (searchValue: string = '') => {
 	};
 };
 
-export const loadById = (id: string ) => {
+export const loadById = (id: string) => {
 	return {
 		type: LOAD_BY_ID,
 		payload: id,
@@ -74,4 +74,3 @@ export const incrementPage = () => {
 		type: INCREMENT_PAGE,
 	};
 };
-

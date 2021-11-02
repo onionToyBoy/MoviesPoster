@@ -1,4 +1,4 @@
-import {  put, call, throttle } from 'redux-saga/effects';
+import { put, call, throttle } from 'redux-saga/effects';
 import { LOAD_BY_SEARCH_VALUE } from '../../constants/types';
 import {
 	changeErrorStatus,
@@ -6,12 +6,12 @@ import {
 	searchFilms,
 } from '../actions';
 
-type actionType= {
-	type: typeof LOAD_BY_SEARCH_VALUE,
-	payload: string,
-}
+type actionType = {
+	type: typeof LOAD_BY_SEARCH_VALUE;
+	payload: string;
+};
 
-const fetchFilms = async(searchValue:string):Promise<any>=> {
+const fetchFilms = async (searchValue: string): Promise<any> => {
 	try {
 		const response = await fetch(
 			`https://www.omdbapi.com/?apikey=e5e760b6&s=${searchValue}&page=1&`
@@ -20,12 +20,12 @@ const fetchFilms = async(searchValue:string):Promise<any>=> {
 	} catch (e) {
 		console.log(e);
 	}
-}
+};
 
 export function* sagaWorker(action: actionType) {
 	try {
 		yield put(changeLoadingStatus(true));
-		const films:Object = yield call(fetchFilms, action.payload);
+		const films: Object = yield call(fetchFilms, action.payload);
 		yield put(searchFilms(films));
 	} catch {
 		yield put(changeErrorStatus(true));

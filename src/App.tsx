@@ -9,24 +9,24 @@ import { useSelector } from 'react-redux';
 import { selectLoadingStatus } from './store/selectors';
 import { Spinner } from './components/Spinner';
 import { FilmDescription } from './pages/description/FilmDescription';
-
+import { ABOUT, DESCRIPTION, HOME } from './constants/paths';
 
 function App() {
 	const loadingStatus = useSelector(selectLoadingStatus);
 
 	return (
-			<Router>
-				<Redirect from='/' to='/home' />
-				<Header />
-				<div className='container'>
-					<div className='content'>
-						<Route path='/home' exact component={Films} />
-						<Route path='/about' component={About} />
-						<Route path='/description' component={FilmDescription} />
-					</div>
+		<Router>
+			<Redirect from='/' to={HOME} />
+			<Header />
+			<div className='container'>
+				<div className='content'>
+					<Route path={HOME} exact component={Films} />
+					<Route path={ABOUT} component={About} />
+					<Route path={DESCRIPTION} component={FilmDescription} />
 				</div>
-				{loadingStatus&&<Spinner/>}
-			</Router>
+			</div>
+			{loadingStatus && <Spinner />}
+		</Router>
 	);
 }
 

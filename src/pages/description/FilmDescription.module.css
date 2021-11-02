@@ -114,7 +114,7 @@
     color: rgb(92, 201, 3);
 }
 
-.hidden{
+.hidden {
     display: none;
 }
 
@@ -136,49 +136,49 @@
         font-size: 20px;
     }
 
-    .label{
+    .label {
         font-size: 18px;
     }
 }
 
 @media (max-width: 750px) {
-  .image {
+    .image {
         max-width: 200px;
-  }
+    }
 
-  .title {
-    font-size: 25px;
-}
+    .title {
+        font-size: 25px;
+    }
 
-.info {
-    font-size: 17px;
-}
+    .info {
+        font-size: 17px;
+    }
 
-.label{
-    font-size: 15px;
-}
+    .label {
+        font-size: 15px;
+    }
 
 
-.imageContainer {
-    width: 40%;
-}
-        
+    .imageContainer {
+        width: 40%;
+    }
+
 }
 
 @media (max-width: 750px) {
     .title {
         font-size: 22px;
     }
-    
+
     .info {
         font-size: 15px;
     }
-    
-    .label{
+
+    .label {
         font-size: 12px;
     }
 
-    .description{
+    .description {
         padding: 0;
     }
 }
@@ -186,24 +186,24 @@
 @media (max-width: 550px) {
     .image {
         display: none;
-  }
+    }
 
-  .description {
-      flex-direction: column;
-  }
+    .description {
+        flex-direction: column;
+    }
 
-  .innerImage{
-    display: block;
+    .innerImage {
+        display: block;
 
-  }
+    }
 
-  
-.button {
-    font-size: 16px;
-    padding: 10px;
-}
 
-.buttonContainer {
-    padding: 10px;
-}
+    .button {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .buttonContainer {
+        padding: 10px;
+    }
 }

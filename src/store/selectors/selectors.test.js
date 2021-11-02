@@ -10,7 +10,7 @@ import {
 describe('Tests of selectors', () => {
 	const opendFilmId = 'tt1520211';
 
-	const state= {
+	const state = {
 		films: [
 			{
 				Title: 'Pink',
