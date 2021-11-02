@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
 
 import './App.css';
 import { Header } from './components/Header';
@@ -16,10 +16,11 @@ function App() {
 
 	return (
 			<Router>
+				<Redirect from='/' to='/home' />
 				<Header />
 				<div className='container'>
 					<div className='content'>
-						<Route path='/' exact component={Films} />
+						<Route path='/home' exact component={Films} />
 						<Route path='/about' component={About} />
 						<Route path='/description' component={FilmDescription} />
 					</div>

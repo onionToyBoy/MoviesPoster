@@ -19,7 +19,7 @@ type payloadType={
 const fetchFilms = async(action: payloadType ):Promise<any>=> {
 	try {
 		const response = await fetch(
-			`http://www.omdbapi.com/?apikey=e5e760b6&s=${action.searchValue}&page=${action.page}`
+			`https://www.omdbapi.com/?apikey=e5e760b6&s=${action.searchValue}&page=${action.page}`
 		);
 		return await response.json();
 	} catch (e) {

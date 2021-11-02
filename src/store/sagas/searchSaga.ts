@@ -14,7 +14,7 @@ type actionType= {
 const fetchFilms = async(searchValue:string):Promise<any>=> {
 	try {
 		const response = await fetch(
-			`http://www.omdbapi.com/?apikey=e5e760b6&s=${searchValue}&page=1&`
+			`https://www.omdbapi.com/?apikey=e5e760b6&s=${searchValue}&page=1&`
 		);
 		return await response.json();
 	} catch (e) {
