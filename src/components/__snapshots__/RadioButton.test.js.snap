@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`RadioButton test Props in RadioButton component should be correct 1`] = `ShallowWrapper {}`;
+
 exports[`RadioButton test Should render RadioButton component correct 1`] = `ShallowWrapper {}`;
