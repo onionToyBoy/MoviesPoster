@@ -11,8 +11,8 @@ export const RadioButton: React.FC<{ label: string, isSelected:boolean, fn:()=>v
 
 	return (
 		<div className={styles.container}>
-			<div className={checkStatus()} onClick={fn}></div>
-			<div className={styles.label}>{label}</div>
+			<div id={'RadioButton'} className={checkStatus()} onClick={fn}></div>
+			<div id={'label'} className={styles.label}>{label}</div>
 		</div>
 	);
 };

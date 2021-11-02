@@ -27,7 +27,7 @@ const fetchFilms = async(action: payloadType ):Promise<any>=> {
 	}
 }
 
-function* sagaWorker(action: actionType) {
+export function* sagaWorker(action: actionType) {
 	try {
 		yield put(changeLoadingStatus(true));
 		const films:Object = yield call(fetchFilms, action.payload);

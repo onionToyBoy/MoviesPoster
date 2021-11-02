@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header test Correct Header snapshot 1`] = `ShallowWrapper {}`;
+
+exports[`Header test Should render Header component correct 1`] = `ShallowWrapper {}`;
