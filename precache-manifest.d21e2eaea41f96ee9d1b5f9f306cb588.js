@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "64c1f691355a96971eba382e08ca87a9",
+    "revision": "e383b22ac583bdb0c392d72f49a87580",
     "url": "/movies-poster/index.html"
   },
   {
-    "revision": "326541f5827ed0cad228",
+    "revision": "70e723d8936f7523c359",
     "url": "/movies-poster/static/css/main.1a3384b3.chunk.css"
   },
   {
-    "revision": "130115178c464228baa6",
-    "url": "/movies-poster/static/js/2.38082f11.chunk.js"
+    "revision": "05de19a0774d4b11b843",
+    "url": "/movies-poster/static/js/2.6fca4c66.chunk.js"
   },
   {
     "revision": "f7e623707d9b37a3821ec4c3548a4309",
-    "url": "/movies-poster/static/js/2.38082f11.chunk.js.LICENSE.txt"
+    "url": "/movies-poster/static/js/2.6fca4c66.chunk.js.LICENSE.txt"
   },
   {
     "revision": "b7f16914fdd4b59df839",
     "url": "/movies-poster/static/js/3.4e641c94.chunk.js"
   },
   {
-    "revision": "326541f5827ed0cad228",
-    "url": "/movies-poster/static/js/main.b9892471.chunk.js"
+    "revision": "70e723d8936f7523c359",
+    "url": "/movies-poster/static/js/main.de2cec75.chunk.js"
   },
   {
     "revision": "8f6448c68840a8481281",
