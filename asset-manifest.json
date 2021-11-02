@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/movies-poster/static/css/main.1a3384b3.chunk.css",
-    "main.js": "/movies-poster/static/js/main.63eb2cc1.chunk.js",
-    "main.js.map": "/movies-poster/static/js/main.63eb2cc1.chunk.js.map",
+    "main.js": "/movies-poster/static/js/main.19dc7de9.chunk.js",
+    "main.js.map": "/movies-poster/static/js/main.19dc7de9.chunk.js.map",
     "runtime-main.js": "/movies-poster/static/js/runtime-main.bcf020a6.js",
     "runtime-main.js.map": "/movies-poster/static/js/runtime-main.bcf020a6.js.map",
-    "static/js/2.38082f11.chunk.js": "/movies-poster/static/js/2.38082f11.chunk.js",
-    "static/js/2.38082f11.chunk.js.map": "/movies-poster/static/js/2.38082f11.chunk.js.map",
+    "static/js/2.6fca4c66.chunk.js": "/movies-poster/static/js/2.6fca4c66.chunk.js",
+    "static/js/2.6fca4c66.chunk.js.map": "/movies-poster/static/js/2.6fca4c66.chunk.js.map",
     "static/js/3.4e641c94.chunk.js": "/movies-poster/static/js/3.4e641c94.chunk.js",
     "static/js/3.4e641c94.chunk.js.map": "/movies-poster/static/js/3.4e641c94.chunk.js.map",
     "index.html": "/movies-poster/index.html",
-    "precache-manifest.40ae43dca35f6276cacb5f7fb97bc7d5.js": "/movies-poster/precache-manifest.40ae43dca35f6276cacb5f7fb97bc7d5.js",
+    "precache-manifest.a680c85c2d1d027c1151806cf3bb2866.js": "/movies-poster/precache-manifest.a680c85c2d1d027c1151806cf3bb2866.js",
     "service-worker.js": "/movies-poster/service-worker.js",
     "static/css/main.1a3384b3.chunk.css.map": "/movies-poster/static/css/main.1a3384b3.chunk.css.map",
-    "static/js/2.38082f11.chunk.js.LICENSE.txt": "/movies-poster/static/js/2.38082f11.chunk.js.LICENSE.txt",
+    "static/js/2.6fca4c66.chunk.js.LICENSE.txt": "/movies-poster/static/js/2.6fca4c66.chunk.js.LICENSE.txt",
     "static/media/App.css": "/movies-poster/static/media/ZombiePattern.f24b7859.jpg",
     "static/media/hand.png": "/movies-poster/static/media/hand.d98c6088.png",
     "static/media/noimage.jpg": "/movies-poster/static/media/noimage.0383a250.jpg",
@@ -21,8 +21,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.bcf020a6.js",
-    "static/js/2.38082f11.chunk.js",
+    "static/js/2.6fca4c66.chunk.js",
     "static/css/main.1a3384b3.chunk.css",
-    "static/js/main.63eb2cc1.chunk.js"
+    "static/js/main.19dc7de9.chunk.js"
   ]
 }
